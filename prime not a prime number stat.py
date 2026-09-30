@@ -59,7 +59,7 @@ F = F*10+K
 print(F)
 
 # reverse in - value
-N = 4543
+N = - 4543
 if N < 0:
     copy = N * -1 #this is the formula to hack for negative number
 else:
@@ -72,3 +72,23 @@ while copy > 0:
 if N< 0:
     rev = rev * -1
 print(rev)
+
+# 30/09/2026
+# reverse task [multiple times number ask code]
+
+T = int(input("Enter a single digit : "))
+while T > 0:
+    N=int(input("Enter the digit: "))
+    if N < 0:
+        copy=N*-1
+    else:
+        copy=N
+    rev=0
+    while copy>0:
+        d=copy%10 #last digit
+        rev=rev*10+d
+        copy//=10
+    if N <0:
+        rev = rev*-1
+    print(rev)
+    T-=1
