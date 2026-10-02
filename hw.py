@@ -33,3 +33,11 @@ try:
           print("This is odd number")
 except ValueError:
        print("Invalid number")
+
+#  Increasing pattern
+for i in range (1,6):
+    print("*" * i)
+
+#  Homework
+for i in range(1,6):
+    print(" "*(5-i)+"*"*i)
