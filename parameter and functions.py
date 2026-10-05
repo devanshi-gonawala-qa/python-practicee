@@ -34,6 +34,95 @@ def calculate_salary(base_monthly, bonus, equity):
 a = calculate_salary(10000,5000,10000)
 print(a + 10000)
 
+# 05/10/2026
+# Scope of variables
+
+# a = 1 # Global scope
+# def area_circle(radius):
+#     area = 3.14 * (radius ** 2) #area is a local variable
+#     return area
+# b = area_circle(10) #Global variable
+# print(a) # print 1
+# print(b) #prints 314.0
+# print(area) #error
+
+a = 1 #global
+def abc():
+    a = 2 #local scope
+    print(a) #2
+abc() #2
+print(a) #print 1
+
+a = 1 #global
+def abc():
+    global a #now this a is global  
+    a = 2 #local scope
+    print(a) #2
+abc() #2
+print(a) #print 2
+
+#Quiz
+def foo(a): #0 prints 0 value thats is false
+    if(a): #
+        return 100
+    a+=20 #0+20
+    return a
+print(foo(0)) #20
+
+def solve(a,b):
+    print('Function started')
+    return 0
+    c = a + b
+    print('Function Ends')
+c = solve(2,3) #0
+print(c)
+
+# Quiz 1
+# foo() 1
+# foo() 2
+# for i in range(1,5):
+#     foo()
+
+# # And = 6 foo will be called
+
+# Quiz 2
+# def area_rectangle(l,b):
+#     area = l * b
+# area_circle1(3,4) # give error 
+# print (area) #error because area is local variable and called outside the function
+
+# Simple intrest
+# Take principal, rate and time as input from user
+# and create a function
+# To calculate simple intrest # (p * r* t) /100
+p =float(input("Enter principal: "))
+r =float(input("Enter rate: "))
+t =float(input("Enter time: "))
+
+def simple_inetrest(p,r,t):
+    return(p*r*t) /100
+simple_inetrest_value = simple_inetrest(p,r,t)
+print("simple_inetrest:" , simple_inetrest_value)
+
+# Positional and keyword argument
+def bio_data(name,age,gender):
+    print("Name: ", name)
+    print("Age: ", age)
+    print("Gender", gender)
+# bio_data(23,male, aakar) # give in 23 in name in age male and in gender aakar
+bio_data(age=23,gender="Male", name = "Aakar")
+
+# Default and undefined variables
+
+def bio_data(name, age=0,gender=None):
+    print("Name: ", name)
+    print("Age: ", age)
+    print("Gender:", gender)
+bio_data(name="aakar")
+
+
+
+
     
 
 
