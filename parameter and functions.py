@@ -120,9 +120,22 @@ def bio_data(name, age=0,gender=None):
     print("Gender:", gender)
 bio_data(name="aakar")
 
+# 07/10/2026  - ma'am on leave
+# 09/10/2026
 
+# Docstring
+'''
+hgghghbhbhb
+bvghvgv bv
+bvghvvgb
+'''
+print(round(3.45678,4)) # 3.4568
+def abc(name,gender,age = 0):
+    print(name,gender,age)
+abc(name = "Devanshi", gender = "Female")
 
-
-    
+def abc(a,b,c=10):
+    return a,b,c
+print((abc(1,2)))
 
 
