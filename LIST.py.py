@@ -1,3 +1,4 @@
+# 09/10/2026
 # array - list in Python
 # Mutable = means list is changeble
 # list data type always be list type
@@ -45,3 +46,69 @@ students = ["Kusum", "Shubham", "Pooja", "Ruben", "Aarushi", "Vinoth", "Veerendr
 
 for i in range(len(students)): #you can not write 7 because list may be change so don't hard coding thats why len(students) and if in future list increase or decrease this print properly
     print(students[i], end = "  ")
+
+# 12/10/2026
+# Square all the eleements inside the array [method 2]
+a = [1 , 2, 3, 4]
+for index in a : #becasue we not print whole array square sonits should be seperate that's why we use the index variable
+    print(index**2)
+
+# Square all the elemnets inside the array [method 1]
+a = [1, 2, 3, 4]
+for i in range(len(a)):
+    a[i] = a[i] ** 2
+print(a)
+
+# Function in a list
+# len()
+a = [1, 5, 6, 10, 15, 20]
+print(len(a)) # 6
+
+# append() - add value at the last
+a = []
+print(a) # blank prints
+a.append(10) # 10
+print(a)
+a.append(True)
+print(a)
+a.append (True)
+print(a)
+a.append("Devanshi")
+print(a)
+a.append("Devanshi")
+print(a) #also prints the duplicate value in the list
+a.append([1,2,3])
+print(a) #also prints list in list
+
+# insert() - give number and put that value on that index number
+a = [1, 2, 3, 4]
+a.insert(1, "Devanshi")
+print(a)
+a.insert(0, "Fenil")
+print(a)
+a.insert(-1, "abc")
+print(a)
+a.insert(8, 'shdv')
+print(a) # if index number is not there so its add at the last
+a.insert(110, 'last')
+print(a)
+
+# pop() - removes the item at last and delete which index mention
+a = [1, 2, 3, 4, 5, 6]
+print(a.pop())
+print(a)
+print(a.pop(0))
+print(a)
+print(a.pop(2))
+print(a)
+# 2, 3, 5 - final
+# print(a.pop(10)) #gives error becuase 10th index not in a list
+
+# remove() - if duplicate value there at one time only remove he first number or value
+students = ['Kusum', "Devanshi", "Keyuri", "Sweety", "Khushi", "Aishwarya"]
+students.remove("Khushi")
+print(students)
+a = [1, 2, 3, 4, 5, 2]
+a.remove(2)
+print(a)
+
