@@ -112,3 +112,66 @@ a = [1, 2, 3, 4, 5, 2]
 a.remove(2)
 print(a)
 
+# 14/10/2026
+# + opreator
+a = [1,2, 'a']
+b = [4, 5, 6]
+c = a+b
+print(c)
+# extend - list value add in list
+a = [2, 3 , 4, 7]
+a.extend([12, 13, 15, 20])
+a.extend(range(5)) # range 0 to 4 aslo add in list
+print(a)
+
+# Check value in list use in
+a = ['a', 'c', 'd', 'g']
+print('x' in a)
+if 'd' in a:
+    a.remove('d')
+print(a)
+
+n = int(input("How many colors: "))
+colors = []  #to make blank list of colors because this value add in the blank list when user enter color
+for _ in range(n):
+    color = input("Enter color: ")
+    colors.append(color) #user enter color so add in list that's why use append
+print(colors)
+
+# range len
+a = ['Piyush', 'Shekhar']
+for i in range(len(a)):
+    if a[i] == "Shekhar":
+        print(i)
+
+a = ['a', 'b', 'c']
+for i in range(len(a)):
+    print(i , ' ', a[i])
+
+# 2D list [Nested list]
+students = [
+    [1, "Pooja"],
+    [2, "Devanhsi"],
+    [3, "Keyuri"]
+]
+print(students)
+
+# Indexing in 2d list
+a = [
+    [10,20,30], #0
+    [40,50,60], #1
+    [70, 80,90] #2
+]
+print(a[0][1]) #20 
+print(a[1][1]) #50
+print(a[2][0]) #70
+
+# Itreation in list
+numbers = [
+    [1,2],
+    [3,4]
+]
+for row in numbers: #row[0]
+    for item in row:
+        print(item*2, end = " ")
+    print()
