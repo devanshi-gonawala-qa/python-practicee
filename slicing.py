@@ -82,7 +82,7 @@ col = 4
 count = 0 # start from 0
 even_num = [] # create empty list becase fill the value in this list 
 for i in range(row):
-    temp [] #create blank list because value which is come stor in this variable and temp is in the row means in i 
+    temp = [] #create blank list because value which is come stor in this variable and temp is in the row means in i 
     for j in range(col):
         temp.append(count)
         count+=2 #increase 2 number check questioon
@@ -106,3 +106,76 @@ for i in range(len(a)):
         break
 else:
     print("Not found")
+
+# 16/10/2026
+# other method to check 
+a = [4,5,3,6,10,6]
+n = 60
+if n in a:
+    print("Found at :" + str(a.index(n)))
+else :
+    print("Not found")
+
+# Given a list , you have to find the maximum element in this list
+
+a = [2,10,2,12,60]
+# ans = 60
+max_ele = a[0] #60
+for i in range(1, len(a)): #its startying at index 1 because we consider initially 0 index 2 is greater
+    if a[i] > max_ele: #60 >12
+        max_ele = a[i] #60
+print(max_ele)
+
+# Given a list , you have to find the minimum element in this list
+a = [2,10,2,12,60]
+# ans = 2
+min_ele = a[0] #2
+for i in range(1, len(a)): #its startying at index 1 because we consider initially 0 index 2 is greater
+    if a[i] > min_ele: #2>10
+        min_ele = a[i] #2
+print(min_ele) 
+
+# List comprehension, create a list of squeares till n-1
+# normally print
+n = 5 
+square = []
+for i in range(n):
+    square.append(i*i)
+print(square)
+# List comprehension
+new_square = [i*i for i in range(n)]
+print(new_square)
+
+# Create a list of all even elements
+even_num = [i for i in range(0,n,2)] #0 2 4
+print(even_num)
+# 2nd method
+even_num = [i for i in range(0,n) if i%2 ==0]
+print(even_num)
+
+# create a 2 array with initalization of 0 
+row = 5
+col = 4
+array = [[1 for j in range(col)] for i in range(row)] # 1 because we want to print 1 you can change any number
+print(array)
+
+# Split function
+a = input()
+arr = a.split(" ") #if you want to split + then its split liek 12+67 so output is 12 67
+arr = [int(i) for i in arr]
+print(arr)
+
+user_inp_list=[]
+row = 5
+col = 4
+n = 0
+for i in range(row):
+    temp = []
+    for j in range(col):
+        n+=2
+        temp.append(n)
+    user_inp_list.append(temp)
+print(user_inp_list)
+# reverse list
+a = [1, 2, 6, 4, 8, ' ']
+print(a[::-1])
