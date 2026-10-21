@@ -179,3 +179,4 @@ print(user_inp_list)
 # reverse list
 a = [1, 2, 6, 4, 8, ' ']
 print(a[::-1])
+
