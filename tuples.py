@@ -116,3 +116,53 @@ for each_chr in a:
 for i in range(len(a)):
     a[i] = 'c'
     print(a[i])
+
+# 28/10/2026 - ma'am on leave
+# 26/10/2026 - give test
+# 30/10/2026 
+# case sensitive 
+a = 'Piyush'
+b = 'piyush'
+print(a == b)
+s= 'Tops Tech'
+print(s[0:5]) #ans is Tops
+
+text = 'TopsTechnologies'
+print(text[0:6])
+print(text[-3:]) #ans is ies
+print(text[6:11])
+print(text[::-1]) #reverse string
+print(text[::2]) #1 char skip and then print word
+print(text[3:])
+
+# Functions in strings
+print("tops tech".capitalize()) #1st word capital
+print("tops tech".title()) #every first word capital
+print("tops tech".count(t)) #how many times t come
+print('pooja makhija'.count('ja'))
+deltr = 'ae'
+print('piyush singh'.replace('iy',deltr)) #change iy to ae
+
+# Replace 
+a = 'piyush'
+b = a.replace('i','e')
+print(a)
+print(b)
+
+# Split(Seperator)
+print('abc_bncd_def'.split('_'))
+print('abc+_bncd+_def'.split('+_'))
+
+# Join()
+a = ['abc','bncd','def']
+print('_+'.join(a))
+
+#upper and lower
+print('tops'.upper())
+print('TOPS'.lower())
+
+# Quiz
+a = 'abcd'
+a+='e'
+print(a)
+print(len(a)) #ans is abcde and length is 5
