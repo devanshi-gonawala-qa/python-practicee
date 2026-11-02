@@ -63,3 +63,14 @@ nicknames = {"Madhuri" : "Sweety",
              "Aakar" : "Golu"}
 print(nicknames.keys())
 print(nicknames.values())
+
+# Iterating a dictionary
+for key in nicknames:
+    print(f'keys:{key},value:{nicknames[key]}')
+for key,value in nicknames.items():
+    print(f'keys:{key},value:{value}')
+# Modifying multiple keys
+d = {'a' : 1, 'b': 2, 'c' :3}
+for key in d.keys():
+    d[key] = d[key] **2
+print(d)
