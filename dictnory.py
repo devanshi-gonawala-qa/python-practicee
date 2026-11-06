@@ -136,3 +136,47 @@ print(len(words))
 unique = set(words)
 print(unique)
 print(len(unique)) #common value not take in set
+
+# 06/11/2026
+# Ports in PC
+free_ports = list(range(8000,9999))
+used_ports = set()
+if 8001 in free_ports:
+    print("Port is in free")
+    free_ports.remove(8001)
+    used_ports.add(8001)
+else:
+    print('Port is already in use')
+print(used_ports)
+
+# Lembda function
+# Lemda arguments: expressiom
+
+# def add(x,y)
+#     return x+y
+# print(add(2,3)) #this is normal function
+
+# In lembda function
+add=lambda x,y:x+y
+print(add(2,3))
+
+# One task
+logs = {'server1_logs': 
+        [
+            {'timestamp' : '2024-07-18 10:04:10', 'level': 'ERROR', 'message' : 'Disk full'},
+            {'timestamp' : '2024-07-18 10:00:01', 'level': 'INFO', 'message' : 'Server started'}
+        ],
+    'server2_logs': 
+        [
+            {'timestamp' : '2024-07-18 10:01:17', 'level': 'ERROR', 'message' : 'Database connection failed'},
+            {'timestamp' : '2024-07-18 10:02:45', 'level': 'WARNING', 'message' : 'High memory usage'}
+        ],
+}
+merged_logs=[]
+for key,value in logs.items():
+    merged_logs.extend(value)
+# print(merged_logs)
+
+# sort on the timestamp
+all_logs=sorted(merged_logs,key=lambda x:x['timestamp'])
+print(all_logs)
