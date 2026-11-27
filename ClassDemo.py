@@ -88,7 +88,58 @@ t1.get_data()
 t1.write_code()
 t1.test_build()
 
+# 27/11/2026
+# multiinheritance 
+class Browser:
+    def open_browser(self):
+        print("Open Browser")
+class ApiActivity:
+    def call_api(self):
+        print("Api called")
+class Login(Browser, ApiActivity):
+    def login(self):
+        print("Login called")
+l1 = Login()
+l1.open_browser()
+l1.call_api()
+l1.login()
 
+# Hierarchical inheritance
+class Browser:
+    def open_browser(self):
+        print("Open browser")
+class Login(Browser):
+    def login(self):
+        print("login called")
+class SignUp(Browser):
+    def sign_up(self):
+        print("sign up")
+l2 = Login()
+l2.open_browser()
+l2.login()
+
+s2 = SignUp()
+s2.open_browser()
+s2.sign_up()
+
+# Hybrid inheritance
+class BaseTest:
+    def base(self):
+        print("This is base class")
+class ApiTest(BaseTest):
+    def api_test(self):
+        print("Api testing")
+class WebTest(BaseTest):
+    def web_test(self):
+        print("Web test")
+class Login(WebTest, ApiTest):
+    def login(self):
+        print("Login called")
+l3 = Login()
+l3.base()
+l3.api_test()
+l3.web_test()
+l3.login()
 
 
         
